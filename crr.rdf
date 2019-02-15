@@ -292,9 +292,7 @@
 
     <!-- http://semanticweb.cs.vu.nl/2009/11/sem/Actor -->
 
-    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Actor">
-        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/ccr#Actor"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Actor"/>
     
 
 
@@ -306,15 +304,14 @@
 
     <!-- http://semanticweb.cs.vu.nl/2009/11/sem/Place -->
 
-    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Place">
-        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/ccr#Place"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Place"/>
     
 
 
     <!-- http://vocab.resc.info/ccr#Actor -->
 
     <owl:Class rdf:about="http://vocab.resc.info/ccr#Actor">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Actor"/>
         <rdfs:label xml:lang="en">Actor</rdfs:label>
     </owl:Class>
     
@@ -888,6 +885,7 @@
     <!-- http://vocab.resc.info/ccr#Place -->
 
     <owl:Class rdf:about="http://vocab.resc.info/ccr#Place">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Place"/>
         <rdfs:label xml:lang="en">Place</rdfs:label>
     </owl:Class>
     
