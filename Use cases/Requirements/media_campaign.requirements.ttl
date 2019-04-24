@@ -1,0 +1,11 @@
+Required
+- subject
+- start_datetime
+- end_datetime
+
+Recommended
+- targeted_audience
+- initiator
+
+Optional
+- majorCampaign

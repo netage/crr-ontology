@@ -1,0 +1,22 @@
+Required
+- date
+- street_name
+- housenumber
+- address_area
+- postname
+- postcode
+- adminUnitL2
+- risk_analysis
+- violation
+- hazard_identified
+- reinspection
+- inspector
+
+Recommended
+- hazard_mitigated
+- adminUnitL1 
+
+Optional
+- inspection_id
+- structure_identification
+

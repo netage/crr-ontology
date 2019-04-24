@@ -1,0 +1,27 @@
+Required
+- date
+- street_name
+- housenumber
+- address_area
+- postname
+- postcode
+- adminUnitL2
+
+Recommended
+- adminUnitL1
+- home
+- refusedServices
+- working_smoke_alarms_on_all_levels
+- fire_instructions_given
+
+Optional
+- house_visit_id
+- housenumber_addition
+- working_smoke_alarm_sleeping_alarm
+- age_of_smoke_alarm
+- working_smoke_alarm_in_all_bedrooms
+- number_of_smoke_alarms_installed
+- need_identified
+- hazard_identified
+- hazard mitigated
+- debriefing

@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:NodeShape ;
+	sh:targetClass <http://vocab.resc.info/crr#Education>;
+	sh:property [             
+		sh:path <http://purl.org/dc/terms/identifier>;           
+		sh:maxCount 1 ;
+		sh:name "Identifier" ;
+		sh:datatype xsd:integer;
+	] ;
+	sh:property [             
+		sh:path <http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:dateTime;
+		sh:name "date" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#thoroughfare>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "Streetname" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#locatorDesignator>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "housenumber" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#locatorName>;           
+		sh:datatype xsd:String;
+		sh:name "housenumber_addition" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#addressArea>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "address_area" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#postName>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "postname" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#postCode>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "postcode" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#adminUnitL2>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "adminUnitL2" ;
+	];
+	sh:property [             
+		sh:path <http://www.w3.org/ns/locn#adminUnitL1>;           
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "adminUnitL1" ;
+		sh:severity sh:Warning;
+	];
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#numberOfAttendees>;           
+		sh:datatype xsd:String;
+		sh:name "number_of_attendees" ;
+	];
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#hasEducator>;           
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:String;
+		sh:name "hasEducator" ;
+	];
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#educationSubject>;           
+		sh:datatype xsd:String;
+		sh:name "education-subject" ;
+		sh:severity sh:Warning;
+	].

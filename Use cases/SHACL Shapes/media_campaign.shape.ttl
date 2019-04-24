@@ -1,0 +1,54 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:NodeShape ;
+	sh:targetClass <http://vocab.resc.info/crr#Media>;
+	sh:property [             
+		sh:path <http://purl.org/dc/terms/identifier>;           
+		sh:maxCount 1 ;
+		sh:name "Identifier" ;
+		sh:datatype xsd:integer;
+	] ;
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#mediaSubject>;           
+		sh:maxCount 1 ;
+		sh:minCount 1;
+		sh:name "Media Subject" ;
+		sh:datatype xsd:String;
+	] ;
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#targetedAudience>;           
+		sh:maxCount 1 ;
+		sh:minCount 1;
+		sh:severity sh:Warning;
+		sh:name "Target Audience" ;
+		sh:datatype xsd:String;
+	] ;
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#partOfMajorCampaign>;           
+		sh:maxCount 1 ;
+		sh:name "Major Campaign" ;
+		sh:datatype xsd:String;
+	] ;
+	sh:property [             
+		sh:path <http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp>;           
+		sh:maxCount 1 ;
+		sh:minCount 1;
+		sh:name "Begin timestamp" ;
+		sh:datatype xsd:dateTime;
+	] ;
+	sh:property [             
+		sh:path <http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp>;           
+		sh:maxCount 1 ;
+		sh:minCount 1;
+		sh:name "End timestamp" ;
+		sh:datatype xsd:dateTime;
+	] ;
+	sh:property [             
+		sh:path <http://vocab.resc.info/crr#initiator>;           
+		sh:maxCount 1 ;
+		sh:minCount 1;
+		sh:severity sh:Warning;
+		sh:name "Initiator" ;
+		sh:datatype xsd:anyUri;
+	] .

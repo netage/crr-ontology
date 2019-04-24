@@ -1,0 +1,40 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "eucation.csv",
+  "tableSchema": {
+    "columns": [
+	{
+      "virtual": true,
+	  "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://vocab.resc.info/crr#Media"
+    },{
+      "titles": "subject",
+	  "propertyUrl": "http://vocab.resc.info/crr#mediaSubject",
+      "datatype": "string"
+    },{
+      "titles": "media_id",
+	  "propertyUrl": "http://purl.org/dc/terms/identifier",
+      "datatype": "number"
+    },{
+      "titles": "targeted_audience",
+	  "propertyUrl": "http://vocab.resc.info/crr#targetedAudience",
+      "datatype": "string"
+    },{
+      "titles": "majorCampaign",
+	  "propertyUrl": "http://vocab.resc.info/crr#partOfMajorCampaign",
+      "datatype": "string"
+    },{
+      "titles": "start_datetime",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "end_datetime",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "initiator",
+	  "propertyUrl": "http://vocab.resc.info/crr#initiator",
+      "datatype": "anyURI"
+    }]
+  }
+}

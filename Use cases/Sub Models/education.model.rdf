@@ -1,0 +1,1019 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vocab.resc.info/ccr#"
+     xml:base="http://vocab.resc.info/ccr"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://vocab.resc.info/crr#">
+        <terms:description xml:lang="en">Vocabulary to describe the Community Risk Reduction (CRR) activities within the Fire Service and Third-Party Organisations.</terms:description>
+        <terms:title xml:lang="en">Community Risk Reduction</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.resc.info/crr#actionTaken -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#actionTaken">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#educationSubject -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#educationSubject">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Education"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#educator -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#educator">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:range rdf:resource="http://vocab.resc.info/crr#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#fireInstructionsGiven -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#fireInstructionsGiven">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#firesafetyEducator -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#firesafetyEducator">
+        <rdfs:range rdf:resource="http://vocab.resc.info/crr#Fire_Safety_Educator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#hasEducator -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#hasEducator">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:range rdf:resource="http://vocab.resc.info/crr#Educator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#locationOfEducation -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#locationOfEducation">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:range rdf:resource="http://vocab.resc.info/crr#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.resc.info/crr#targetedAudience -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.resc.info/crr#targetedAudience">
+        <rdfs:domain rdf:resource="http://vocab.resc.info/crr#Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.resc.info/crr#String -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.resc.info/crr#String"/>
+    
+
+
+    <!-- http://vocab.resc.info/crr#age -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.resc.info/crr#age"/>
+    
+
+
+    <!-- http://vocab.resc.info/crr#boolean -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.resc.info/crr#boolean"/>
+    
+
+
+    <!-- http://vocab.resc.info/crr#frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.resc.info/crr#frequency"/>
+    
+
+
+    <!-- http://vocab.resc.info/crr#stories -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.resc.info/crr#stories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticweb.cs.vu.nl/2009/11/sem/Actor -->
+
+    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Actor"/>
+    
+
+
+    <!-- http://semanticweb.cs.vu.nl/2009/11/sem/Event -->
+
+    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+    
+
+
+    <!-- http://semanticweb.cs.vu.nl/2009/11/sem/Place -->
+
+    <owl:Class rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/Place"/>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Actor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Actor">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Actor"/>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Ad-hoc -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Ad-hoc">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Address -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Address">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Location"/>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#AutomaticSuppression -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#AutomaticSuppression">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+        <rdfs:label xml:lang="en">Automatic Suppression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#BEPP_Pamphlet -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#BEPP_Pamphlet">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Pamphlet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Bed_Shaker_Alarm -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Bed_Shaker_Alarm">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireAlarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Building -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Building">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Resources"/>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#BuildingFeatures -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#BuildingFeatures">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Building"/>
+        <rdfs:label xml:lang="en">Building Features</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#BuildingOrganization -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#BuildingOrganization">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Building"/>
+        <rdfs:label xml:lang="en">Building organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Business_Actor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Business_Actor">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#CO_Alarm -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#CO_Alarm">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#CPRTraining -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#CPRTraining">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Training"/>
+        <rdfs:label xml:lang="en">CPR Training</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#CensusData -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#CensusData">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#HistoricData"/>
+        <rdfs:label xml:lang="en">Census Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#CensusTract -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#CensusTract">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Place"/>
+        <rdfs:label xml:lang="en">Census Tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Civic_organization -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Civic_organization">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Non-Profit_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Civilian -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Civilian">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Private_Actor"/>
+        <rdfs:label xml:lang="en">Civilian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#ConstructionType -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#ConstructionType">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#BuildingFeatures"/>
+        <rdfs:label xml:lang="en">Construction Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Contractor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Contractor">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Business_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Coordinate -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Coordinate">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Location"/>
+        <rdfs:label xml:lang="en">Coordinate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Data -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Data">
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#DrillPlan -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#DrillPlan">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#BuildingOrganization"/>
+        <rdfs:label xml:lang="en">Drillplan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Education -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Education">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Event"/>
+        <rdfs:label xml:lang="en">Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Educator -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Educator">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireDepartment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#ElementarySchoolProgram -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#ElementarySchoolProgram">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SchoolProgram"/>
+        <rdfs:label xml:lang="en">Elementary School Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Elevator -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Elevator">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#BuildingFeatures"/>
+        <rdfs:label xml:lang="en">Elevator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Emergency_Actor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Emergency_Actor">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#EscapePlan -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#EscapePlan">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#BuildingOrganization"/>
+        <rdfs:label xml:lang="en">Escape plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Evacuation_Drill -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Evacuation_Drill">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Training"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Event -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Event">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Exit_Sign -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Exit_Sign">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Sign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Extinguisher -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Extinguisher">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Fair -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Fair">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Ad-hoc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#FireAlarm -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#FireAlarm">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+        <rdfs:label xml:lang="en">Fire alarm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#FireDepartment -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#FireDepartment">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Emergency_Actor"/>
+        <rdfs:label xml:lang="en">Fire Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#FireProtectionFeatures -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#FireProtectionFeatures">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Resources"/>
+        <rdfs:label xml:lang="en">Fire protection features</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#FireSafetyInstruction -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#FireSafetyInstruction">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:label xml:lang="en">Fire Safety Instruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Fire_Hydrant -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Fire_Hydrant">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Fire_Safety_Educator -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Fire_Safety_Educator">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Non-Profit_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Fire_Truck_Visit -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Fire_Truck_Visit">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Visit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Healthcare -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Healthcare">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Emergency_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#HighSchoolProgram -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#HighSchoolProgram">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SchoolProgram"/>
+        <rdfs:label xml:lang="en">High School Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#HistoricData -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#HistoricData">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Data"/>
+        <rdfs:label xml:lang="en">Historic Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Home_Owner_Associations -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Home_Owner_Associations">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Non-Profit_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Home_Safety_Flyer -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Home_Safety_Flyer">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Pamphlet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Industrial -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Industrial">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Business_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#InspectionReport -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#InspectionReport">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Report"/>
+        <rdfs:label xml:lang="en">Inspection Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Inspection_Pamphlet -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Inspection_Pamphlet">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Pamphlet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Inspector -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Inspector">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireDepartment"/>
+        <rdfs:label xml:lang="en">Inspector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Investigation -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Investigation">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Investigation_Report -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Investigation_Report">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Report"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Investigator -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Investigator">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireDepartment"/>
+        <rdfs:label xml:lang="en">Investigator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#LifeSafetyTraining -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#LifeSafetyTraining">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Training"/>
+        <rdfs:label xml:lang="en">Life Safety Training</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Location -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Location">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Place"/>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Magazine -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Magazine">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+        <rdfs:label xml:lang="en">Magazine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#MaintenanceReport -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#MaintenanceReport">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Report"/>
+        <rdfs:label xml:lang="en">Maintenance Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Media -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Media">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Messaging -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Messaging">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:label xml:lang="en">Messaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Middle_School_Program -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Middle_School_Program">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SchoolProgram"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#NFIRSData -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#NFIRSData">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#HistoricData"/>
+        <rdfs:label xml:lang="en">NFIRS Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#NationalFireAcademy -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#NationalFireAcademy">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:label xml:lang="en">National Fire Academy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Newspaper -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Newspaper">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+        <rdfs:label xml:lang="en">Newspaper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Non-Profit_Actor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Non-Profit_Actor">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Occupant -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Occupant">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Private_Actor"/>
+        <rdfs:label xml:lang="en">Occupant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Organization -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Organization">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Actor"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Owner -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Owner">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Private_Actor"/>
+        <rdfs:label xml:lang="en">Owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Pamphlet -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Pamphlet">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Parade -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Parade">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Ad-hoc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Parcel -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Parcel">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Place"/>
+        <rdfs:label xml:lang="en">Parcel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Place -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Place">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Place"/>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Podcast -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Podcast">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Radio"/>
+        <rdfs:label xml:lang="en">Podcast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Police_Department -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Police_Department">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Emergency_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Poster -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Poster">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Preschool_Program -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Preschool_Program">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SchoolProgram"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Presentation -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Presentation">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Private_Actor -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Private_Actor">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Private_Fire_Hydrant -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Private_Fire_Hydrant">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Fire_Hydrant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Radio -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Radio">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+        <rdfs:label xml:lang="en">Radio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Red_Cross -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Red_Cross">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Emergency_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Religious_Group -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Religious_Group">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Non-Profit_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Report -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Report">
+        <rdfs:label xml:lang="en">Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Resident -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Resident">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Private_Actor"/>
+        <rdfs:label xml:lang="en">Resident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Resources -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Resources">
+        <rdfs:label xml:lang="en">Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#RoofType -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#RoofType">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#BuildingFeatures"/>
+        <rdfs:label xml:lang="en">Roof type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#SchoolProgram -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#SchoolProgram">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:label xml:lang="en">School Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Sign -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Sign">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#SmokeAlarm -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#SmokeAlarm">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireAlarm"/>
+        <rdfs:label xml:lang="en">Smoke alarm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Smoke_Alarm_Living_Area -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Smoke_Alarm_Living_Area">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SmokeAlarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Smoke_Alarm_Sleeping_Area -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Smoke_Alarm_Sleeping_Area">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#SmokeAlarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Smoke_Alarm_Verification -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Smoke_Alarm_Verification">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#SocialMedia -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#SocialMedia">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Media"/>
+        <rdfs:label xml:lang="en">Social Media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Sprinkler -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Sprinkler">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+        <rdfs:label xml:lang="en">Sprinkler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Structure -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Structure">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Place"/>
+        <rdfs:label xml:lang="en">Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Training -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Training">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+        <rdfs:label xml:lang="en">Training</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#VirtualCRR -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#VirtualCRR">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Visit -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Visit">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#WaterSupply -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#WaterSupply">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#FireProtectionFeatures"/>
+        <rdfs:label xml:lang="en">Water supply</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.resc.info/crr#Youth_Campus -->
+
+    <owl:Class rdf:about="http://vocab.resc.info/crr#Youth_Campus">
+        <rdfs:subClassOf rdf:resource="http://vocab.resc.info/crr#Non-Profit_Actor"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

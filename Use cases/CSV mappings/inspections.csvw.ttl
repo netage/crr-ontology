@@ -1,0 +1,77 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "inspection.csv",
+  "tableSchema": {
+    "columns": [
+	{
+      "virtual": true,]
+	  "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://vocab.resc.info/crr#Inspection"
+    },{
+      "titles": "inspection_id",
+	  "propertyUrl": "http://purl.org/dc/terms/identifier",
+      "datatype": "number"
+    },{
+      "titles": "inspector",
+	  "propertyUrl": "http://vocab.resc.info/crr#inspector",
+      "datatype": "number"
+    },{
+      "titles": "date",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "structure_identification",
+	  "propertyUrl": "http://vocab.resc.info/crr#buildingIdentification",
+      "datatype": "string"
+    },{
+      "titles": "reinspection",
+	  "propertyUrl": "http://vocab.resc.info/crr#isReinspection",
+      "datatype": "boolean"
+    },{
+      "titles": "violation",
+	  "propertyUrl": "http://vocab.resc.info/crr#hasViolation",
+    },{
+      "titles": "hazard_identified",
+	  "propertyUrl": "http://vocab.resc.info/crr#hazard_identified",
+    },{
+      "titles": "hazard_mitigated",
+	  "propertyUrl": "http://vocab.resc.info/crr#hazard_mitigated",
+    },{
+      "titles": "risk_analysis",
+	  "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+      "datatype": "string"
+    },{
+      "titles": "street_name",
+	  "propertyUrl": "http://www.w3.org/ns/locn#thoroughfare",
+      "datatype": "string"
+    },{
+      "titles": "housenumber",
+	  "propertyUrl": "http://www.w3.org/ns/locn#locatorDesignator",
+      "datatype": "string"
+    },{
+      "titles": "housenumber_addition",
+	  "propertyUrl": " 	http://www.w3.org/ns/locn#locatorName",
+      "datatype": "string"
+    },{
+      "titles": "address_area",
+	  "propertyUrl": "http://www.w3.org/ns/locn#addressArea",
+      "datatype": "string"
+    },{
+      "titles": "postname",
+	  "propertyUrl": "http://www.w3.org/ns/locn#postName",
+      "datatype": "string"
+    },{
+      "titles": "postcode",
+	  "propertyUrl": "http://www.w3.org/ns/locn#postCode",
+      "datatype": "string"
+    },{
+      "titles": "adminUnitL2",
+	  "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL2",
+      "datatype": "string"
+    },{
+      "titles": "adminUnitL1",
+	  "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL1",
+      "datatype": "string"
+    }]
+  }
+}

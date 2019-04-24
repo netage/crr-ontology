@@ -1,0 +1,13 @@
+Required
+- start_datetime
+- initiator
+- action_taken
+
+
+Recommended
+- end_datetime
+
+Optional
+- professionalize_moment_id
+- debriefing
+- notes

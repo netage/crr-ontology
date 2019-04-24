@@ -1,0 +1,101 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "house_visit.csv",
+  "tableSchema": {
+  "aboutUrl": "http://data.nfpa.org/house_visit/{house_visit_id}",
+    "columns": [
+	{
+      "virtual": true,]
+	  "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://vocab.resc.info/crr#Home_Visit"
+    },{
+      "titles": "house_visit_id",]
+	  "propertyUrl": "http://purl.org/dc/terms/identifier",
+      "datatype": "number"
+    },{
+      "titles": "date",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "street_name",
+	  "propertyUrl": "http://www.w3.org/ns/locn#thoroughfare",
+      "datatype": "string"
+    },{
+      "titles": "housenumber",
+	  "propertyUrl": "http://www.w3.org/ns/locn#locatorDesignator",
+      "datatype": "string"
+    },{
+      "titles": "housenumber_addition",
+	  "propertyUrl": " 	http://www.w3.org/ns/locn#locatorName",
+      "datatype": "string"
+    },{
+      "titles": "address_area",
+	  "propertyUrl": "http://www.w3.org/ns/locn#addressArea",
+      "datatype": "string"
+    },{
+      "titles": "postname",
+	  "propertyUrl": "http://www.w3.org/ns/locn#postName",
+      "datatype": "string"
+    },{
+      "titles": "postcode",
+	  "propertyUrl": "http://www.w3.org/ns/locn#postCode",
+      "datatype": "string"
+    },{
+      "titles": "adminUnitL2",
+	  "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL2",
+      "datatype": "string"
+    },{
+      "titles": "adminUnitL1",
+	  "propertyUrl": "http://www.w3.org/ns/locn#adminUnitL1",
+      "datatype": "string"
+    },{
+      "titles": "home",
+	  "propertyUrl": "http://vocab.resc.info/crr#isHome",
+      "datatype": "boolean"
+    },{
+      "titles": "refusedServices",
+	  "propertyUrl": "http://vocab.resc.info/crr#refusedServices",
+      "datatype": "boolean"
+    },{
+      "titles": "working_smoke_alarm_sleeping_alarm",
+	  "propertyUrl": "http://vocab.resc.info/crr#hasSmokeAlarm",
+      "datatype": "boolean"
+    },{
+      "titles": "age_of_smoke_alarm",
+	  "propertyUrl": "http://vocab.resc.info/crr#ageOfSmokeAlarm",
+      "datatype": "number"
+    },{
+      "titles": "fire_instructions_given",
+	  "propertyUrl": "http://vocab.resc.info/crr#fireInstructionsGiven",
+      "datatype": "boolean"
+    },{
+      "titles": "working_smoke_alarms_on_all_levels",
+	  "propertyUrl": "http://vocab.resc.info/crr#fullSmokeAlarmCoverage",
+      "datatype": "boolean"
+    },{
+      "titles": "working_smoke_alarm_in_all_bedrooms",
+	  "propertyUrl": "http://vocab.resc.info/crr#fullSmokeAlarmBedroomCoverage",
+      "datatype": "boolean"
+    },{
+      "titles": "number_of_smoke_alarms_installed",
+	  "propertyUrl": "http://vocab.resc.info/crr#numberOfSmokeAlarmsInstalled",
+      "datatype": "number"
+    },{
+      "titles": "need_identified",
+	  "propertyUrl": "http://vocab.resc.info/crr#need_identified",
+      "datatype": "string"
+    },{
+      "titles": "hazard_identified",
+	  "propertyUrl": "http://vocab.resc.info/crr#hazard",
+      "datatype": "string"
+    },{
+      "titles": "hazard mitigated",
+	  "propertyUrl": "http://vocab.resc.info/crr#hazardMitigated",
+      "datatype": "string"
+    },{
+      "titles": "debriefing",
+	  "propertyUrl": "http://vocab.resc.info/crr#debriefing",
+      "datatype": "string"
+    }]
+  }
+}

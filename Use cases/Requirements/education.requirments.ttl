@@ -1,0 +1,18 @@
+Required
+- date
+- street_name
+- housenumber
+- address_area
+- postname
+- postcode
+- adminUnitL2
+- hasEducator
+
+Recommended
+- adminUnitL1
+- education-subject
+- number_of_attendees
+
+Optional
+- education_moment_id
+- housenumber_addition

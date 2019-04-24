@@ -1,0 +1,40 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "eucation.csv",
+  "tableSchema": {
+    "columns": [
+	{
+      "virtual": true,]
+	  "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://vocab.resc.info/crr#ProfessionalizeFD"
+    },{
+      "titles": "professionalize_moment_id",]
+	  "propertyUrl": "http://purl.org/dc/terms/identifier",
+      "datatype": "number"
+    },{
+      "titles": "start_datetime",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "end_datetime",
+	  "propertyUrl": "http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp",
+      "datatype": "dateTime"
+    },{
+      "titles": "initiator",
+	  "propertyUrl": "http://vocab.resc.info/crr#initiator",
+      "datatype": "anyURI"
+    },{
+      "titles": "action_taken",
+	  "propertyUrl": "http://vocab.resc.info/crr#actionTaken",
+      "datatype": "string"
+    },{
+      "titles": "action_taken",
+	  "propertyUrl": "http://vocab.resc.info/crr#debriefing",
+      "datatype": "string"
+    },{
+      "titles": "action_taken",
+	  "propertyUrl": "http://vocab.resc.info/crr#notes",
+      "datatype": "string"
+    }]
+  }
+}
