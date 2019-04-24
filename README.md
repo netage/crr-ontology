@@ -1,6 +1,6 @@
 # Use Cases
 
-##  Education
+##  Education Case
 ### Required
 - date
 - street_name
@@ -20,7 +20,7 @@
 - education_moment_id
 - housenumber_addition
 
-## Inspection
+## Inspection Case
 ### Required
 - date
 - street_name
@@ -43,7 +43,7 @@
 - inspection_id
 - structure_identification
 
-## House Visits
+## House Visits Case
 ### Required
 - date
 - street_name
@@ -72,7 +72,7 @@
 - hazard mitigated
 - debriefing
 
-## Media Campaign
+## Media Campaign Case
 ### Required
 - subject
 - start_datetime
@@ -85,7 +85,7 @@
 ### Optional
 - majorCampaign
 
-## Professionalize Fire Department
+## Professionalize Fire Department Case
 ### Required
 - start_datetime
 - initiator
