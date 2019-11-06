@@ -1,0 +1,1000 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix stardog: <tag:stardog:api:> .
+@prefix : <http://api.stardog.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://data.nfpa.org/model/crr/> a owl:Ontology ;
+   <http://purl.org/vocab/vann/preferredNamespacePrefix> "crr" ;
+   <http://purl.org/dc/terms/title> "Community Risk Reduction" ;
+   <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.nfpa.org/model/crr/" ;
+   <http://purl.org/dc/terms/description> "Vocabulary to describe the Community Risk Reduction (CRR) activities within the Fire Service and Third-Party Organizations." ;
+   <urn:neoneo:vocab> true .
+<http://data.nfpa.org/model/crr/FireDepartmentAssessment> rdfs:label "Fire Department Assessment" ;
+   rdfs:comment "A structured process by which relevant information is gathered by an organization providing rescue, fire suppression, and related activities, including any public, governmental, private, industrial, or military organization engaging in this type of activity." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Assessment> .
+<http://data.nfpa.org/model/crr/Assessment> rdfs:label "Assessment"@en ;
+   rdfs:comment " The term assessment refers to the wide variety of methods or tools that assessors use to evaluate, measure, and document the compliance of the fire prevention and knowledge of occupant, employees etc."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/Event> rdfs:label "CRR Event" ;
+   rdfs:comment "An activity/event designed to reduce risks for a community, a fire service organization, or a portion of a service area." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/Investigator> rdfs:label "Investigator" ;
+   rdfs:comment "The Investigator is the actor which is reponsible for conducting a investigation." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/Actor> rdfs:label "Actor" ;
+   rdfs:comment "A person who is involved in a community risk reduction (CRR) activity, this may be a person who is doing a CRR activity, a person who manages a CRR activity, or someone who receives or participates in a CRR activity.  " ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/FireDepartment> rdfs:label "Fire Department" ;
+   rdfs:comment """An organization providing rescue, fire suppression, and related activities, including any public, governmental, private, industrial, or military organization engaging in this type of activity.
+""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EmergencyFirstResponder> .
+<http://data.nfpa.org/model/crr/EmergencyFirstResponder> rdfs:label "Emergency First Responder" ;
+   rdfs:comment "Those persons, including members of fire departments, police departments, other law enforcement agencies, hazardous materials response teams, emergency medical services, and other organizations that have public safety responsibilities and who would respond to rescue and treat victims, and who would protect the public during an emergency incident." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Organization> .
+<http://data.nfpa.org/model/crr/Organization> rdfs:label "Organization" ;
+   rdfs:comment "The entity that provides the direct management and supervision for emergency services personnel." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/NFIRSData> rdfs:label "NFIRS Data"@en ;
+   rdfs:comment "Data retrieved from NFIRS."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HistoricData> .
+<http://data.nfpa.org/model/crr/HistoricData> rdfs:label "Historic Data" ;
+   rdfs:comment "a query of events (emergent or non-emergent) taking place at a geographic location or of interactions with an actor, independent of location. Queried for place by address identifier. Queried for the actor by Last Name, First Name, Date of birth. Query connects to other locally available datasets applicable to the jurisdiction. " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Data> .
+<http://data.nfpa.org/model/crr/Data> rdfs:label "Data" ;
+   rdfs:comment "Information in digital form that can be transmitted or processed" ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/permittedBy> rdfs:label "Permitted By"@en ;
+   rdfs:comment "The actor responsible for issuing te permit."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Permit> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/Permit> rdfs:label "Permit" ;
+   rdfs:comment "A document issued by the Authority Having Jurisdiction (AHJ) for the purpose of authorizing the performance of a specified activity." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Law> .
+<http://data.nfpa.org/model/crr/Law> rdfs:label "Law"@en ;
+   rdfs:comment "Law is a system of rules that are created and enforced through social or governmental institutions to regulate behavior."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Resources> .
+<http://data.nfpa.org/model/crr/Resources> rdfs:label "Resources" ;
+   rdfs:comment "A stock or supply of money, materials, staff, and other assets that can be drawn on by a person or organization in order to function effectively." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/inspectionComplete> rdfs:label "Inspection Complete"@en ;
+   rdfs:comment "Indicates whether the inspection has been fulfilled."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/Inspection> rdfs:label "Inspection" ;
+   rdfs:comment "A physical observation of buildings and products as to its compliance with relevant code and safety standards " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/firesafetyEducator> rdfs:label "Firesafety Educator"@en ;
+   rdfs:comment "The actor responsible for conducting firesafety instructions, not necessarily part of a Fire Department."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> ;
+   rdfs:range <http://data.nfpa.org/model/crr/FireSafetyEducator> .
+<http://data.nfpa.org/model/crr/Education> rdfs:label "Education" ;
+   rdfs:comment "The act of imparting or acquiring general knowledge, developing the power of reasoning/judging as it pertains to all CRR activities and programs." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/FireSafetyEducator> rdfs:label "Fire Safety Educator" ;
+   rdfs:comment "A person responsible for working in a team to educate the public about the risks of fires, falls, high blood pressure, choking, and other threats to life safety, as well as informing them on how to best minimize their risks of suffering injury or death from said risks." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/NonProfitActor> .
+<http://data.nfpa.org/model/crr/NonProfitActor> rdfs:label "Non-Profit Actor"@en ;
+   rdfs:comment "Descirbes a Non-profit actor."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Organization> .
+<http://data.nfpa.org/model/crr/BurnPermit> rdfs:label "Burn Permit" ;
+   rdfs:comment "Permission granted by the authority having jurisdiction (AHJ) to set a fire outdoors (e.g vegetation burns, bonfires, trash burns or fire pits). " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/COAlarm> rdfs:label "CO Alarm" ;
+   rdfs:comment "A carbon monoxide detector or CO detector is a device that detects the presence/level of carbon monoxide (CO) gas in a monitored area and alarms at designated levels to prevent carbon monoxide poisoning.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/FireProtectionFeatures> rdfs:label "Fire Protection Features" ;
+   rdfs:comment """Distinctive attribute and elements to support methods for providing for fire control or fire extinguishment.
+""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Resources> .
+<http://data.nfpa.org/model/crr/Occupant> rdfs:label "Occupant" ;
+   rdfs:comment "A person which is present in a building at a given time" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/PrivateActor> .
+<http://data.nfpa.org/model/crr/PrivateActor> rdfs:label "Private Actor" ;
+   rdfs:comment "An actor not related to a commercial institution or company." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/hasSmokeAlarm> rdfs:label "Has Smoke Alarm"@en ;
+   rdfs:comment "Indicates whether a smoke alarm is present."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/SmokeAlarm> .
+<http://data.nfpa.org/model/crr/SmokeAlarm> rdfs:label "Smoke Alarm" ;
+   rdfs:comment "A device which automatically activates when the presence of smoke is detected and emits an audible and/or visual alarm." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireAlarm> .
+<http://data.nfpa.org/model/crr/FireAlarm> rdfs:label "Fire alarm" ;
+   rdfs:comment """ A system or portion of a combination system consisting of components and circuits arranged to monitor and enunciate the status of fire alarm or supervisory signal- initiating devices and to initiate the appropriate response to those signals.  (CHECK FOR CONTEXT)
+""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/MaintenanceReport> rdfs:label "Maintenance Report"@en ;
+   rdfs:comment "A report written about the maintenance of a resource/apparatus"@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Report> .
+<http://data.nfpa.org/model/crr/Report> rdfs:label "Report" ;
+   rdfs:comment "An official document of CRR Event activities presented. " ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/YouthCampus> rdfs:label "Youth Campus" ;
+   rdfs:comment "The grounds and buildings of a university, college, or school where young people congregate." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/Investigation> rdfs:label "Investigation" ;
+   rdfs:comment "An investigation is usually conducted as a result of a complaint, suspicion or post incident/accident" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/inspectionReport> rdfs:label "Inspection Report"@en ;
+   rdfs:comment "The inspection report which describes the findings of a inspection."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/InspectionReport> .
+<http://data.nfpa.org/model/crr/InspectionReport> rdfs:label "Inspection Report" ;
+   rdfs:comment "A report generated after a inspection with the findings which were found during the inspection." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Report> .
+<http://data.nfpa.org/model/crr/inspector> rdfs:label "Inspector"@en ;
+   rdfs:comment "The actor responsible for conducting the inspection"@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/Place> rdfs:label "Place" ;
+   rdfs:comment "A building or locality used for a purpose" ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/FireWorksPatrol> rdfs:label "Fireworks Patrol" ;
+   rdfs:comment """Fire Investigators out on patrol looking for illegal firework displays, illegal fireworks and fires. 
+""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/hazardMitigated> rdfs:label "Hazard Mitigated"@en ;
+   rdfs:comment "The hazard mitigated"@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/Training> rdfs:label "Training" ;
+   rdfs:comment "Coursework designed to provide students knowledge, skills, abilities or behaviors.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/ElementarySchoolProgram> rdfs:label "Elementary School Program" ;
+   rdfs:comment "An educational program provided in a school for primary education of young children." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SchoolProgram> .
+<http://data.nfpa.org/model/crr/SchoolProgram> rdfs:label "School Program" ;
+   rdfs:comment "The delivery of an educational curriculum of safety information to age appropriate audiences." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/ignitionSource> rdfs:label "Ignition Source"@en ;
+   rdfs:comment "The iginitionsource of a fire."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Investigation> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/Elevator> rdfs:label "Elevator"@en ;
+   rdfs:comment "An elevator (US and Canada) or lift (UK, Ireland and Australia) is a type of vertical transportation device that moves people or goods between floors (levels, decks) of a building, vessel, or other structure."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BuildingFeatures> .
+<http://data.nfpa.org/model/crr/BuildingFeatures> rdfs:label "Building Features"@en ;
+   rdfs:comment "A feature of a building, which could describe different parts of which a building is constructed by."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Building> .
+<http://data.nfpa.org/model/crr/Building> rdfs:label "Building" ;
+   rdfs:comment "A roofed-over structure with or without enclosed walls. (2019 NFPA Glossary of Terms, page 126)" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Resources> .
+<http://data.nfpa.org/model/crr/Media> rdfs:label "Media"@en ;
+   rdfs:comment "Media CRR event."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/DrillPlan> rdfs:label "Emergency Drill Plan" ;
+   rdfs:comment "A schedule or method for practicing emergency evacuation.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BuildingEmergencyPlanning> .
+<http://data.nfpa.org/model/crr/BuildingEmergencyPlanning> rdfs:label "Building Emergency Planning" ;
+   rdfs:comment "Pre-planning and preparedness activities conducted to ensure occupant safety in the event of an emergency (e.g., escape plans, in-house emergency response). " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Building> .
+<http://data.nfpa.org/model/crr/followUp> rdfs:label "Follow-Up"@en ;
+   rdfs:comment "A follow-up is is a CRR event which is a follow-up from a previous CRR event. This could be a new inspection based on a previous inspection. But also a CRR event which is the result of a education event for instance."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/Owner> rdfs:label "Owner" ;
+   rdfs:comment "Any person, agent, firm, or corporation having a legal or equitable interest in a property, building, or structure." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/PrivateActor> .
+<http://data.nfpa.org/model/crr/Inspector> rdfs:label "Inspector" ;
+   rdfs:comment "The Inspector is the actor which is reponsible for conducting a inspection." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireDepartment> .
+<http://data.nfpa.org/model/crr/constructionType> rdfs:label "Construction Type"@en ;
+   rdfs:comment "The construction type describes the construction used to built a structure."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Building> ;
+   rdfs:range <http://data.nfpa.org/model/crr/ConstructionType> .
+<http://data.nfpa.org/model/crr/ConstructionType> rdfs:label "Construction Type" ;
+   rdfs:comment "Construction type of a building as defined by NFPA 220." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BuildingFeatures> .
+<http://data.nfpa.org/model/crr/Civilian> rdfs:label "Civilian" ;
+   rdfs:comment "An individual who is not in the armed services or invalid in the delivery of public safety services." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/PrivateActor> .
+<http://data.nfpa.org/model/crr/hasViolation> rdfs:label "Has Violation"@en ;
+   rdfs:comment "An identified violation during a CRR event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Law> , <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/Violation> rdfs:label "Violation" ;
+   rdfs:comment "An action, through intent or neglect, that goes against a law, code, principal or standard." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/EvacuationDrill> rdfs:label "Evacuation Drill" ;
+   rdfs:comment "The practice of an escape plan." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Training> .
+<http://data.nfpa.org/model/crr/hazard> rdfs:label "Hazard identified"@en ;
+   rdfs:comment "Hazard identified during a CRR event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/FSIA> rdfs:label "Fire Sprinkler Incentive Act" ;
+   rdfs:comment """The Fire Sprinkler Incentive Act (FSIA) is the name of a piece of legislation that has been introduced in both the House and the Senate since 2003.
+OR
+H.R.1481 — 115th Congress (2017-2018). This bill amends the Internal Revenue Code to allow: (1) 100% expensing in a current taxable year of the cost of automated fire sprinkler system retrofit property, as defined by this bill; and (2) accelerated depreciation (i.e., a 15-year recovery period) of automated fire sprinkler system retrofit property that has a certain classification by the National Fire Protection Association and is installed in a building or structure that was placed in service before the sprinkler system and has an occupiable story that is greater than 75 feet above the lowest level of fire department vehicle access.""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Law> .
+<http://data.nfpa.org/model/crr/PoliceDepartment> rdfs:label "Police Department" ;
+   rdfs:comment "A governmental department concerned primarily with maintenance of public order, safety, and enforcement of laws and possessing executive, judicial, and legislative powers." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EmergencyFirstResponder> .
+<http://data.nfpa.org/model/crr/ReligiousGroup> rdfs:label "Religious Group" ;
+   rdfs:comment "A set of individuals whose identity as such is distinctive in terms of common religious creed, beliefs, doctrines, practices, or rituals." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/NonProfitActor> .
+<http://data.nfpa.org/model/crr/SmokeAlarmSleepingArea> rdfs:label "Smoke Alarm Sleeping Area" ;
+   rdfs:comment "A smoke alarm is present and operational in the vicinity of the Sleeping Area" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SmokeAlarm> .
+<http://data.nfpa.org/model/crr/initiator> rdfs:label "Initiator"@en ;
+   rdfs:comment "Initiator of a CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/Canvas> rdfs:label "Canvass" ;
+   rdfs:comment "The systematic initiation of direct contact with individuals.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/Flawless> rdfs:label "Flawless" ;
+   rdfs:comment "Without any blemishes, imperfections, mistakes or shortcomings." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/Status> rdfs:label "Status"@en ;
+   rdfs:comment "Describes the status of a resource."@en ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/Extinguisher> rdfs:label "Extinguisher" ;
+   rdfs:comment "A device containing water, gas, powder, or foam that is used to suppress a fire." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> .
+<http://data.nfpa.org/model/crr/EditingParkingLot> rdfs:label "Editing Parking Lot" ;
+   rdfs:comment "This is a temporary place to place items/definitions that need to be moved, put somewhere else, reviewed, or otherwise are inappropriately placed in their current location and it is not clear where to put them currently.  This is only for the purposes of initially editing and building the data models " ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/buildingIdentification> rdfs:label "Building Identification"@en ;
+   rdfs:comment "Identification used for identifing a building or structure. This could be a house number, a location designator or a combination of both."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Building> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/Vandalize> rdfs:label "Vandalize" ;
+   rdfs:comment "To deliberately destroy or damage." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/BEPPPamphlet> rdfs:label "BEPP Pamphlet" ;
+   rdfs:comment "A BEPP pamphlet" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> , <http://data.nfpa.org/model/crr/Pamphlet> .
+<http://data.nfpa.org/model/crr/Pamphlet> rdfs:label "Pamphlet"@en ;
+   rdfs:comment "A small booklet or leaflet containing information or arguments about a single subject."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/reportRequired> rdfs:label "Report Required"@en ;
+   rdfs:comment "Indicates whether a report is required for the CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Report> .
+<http://data.nfpa.org/model/crr/Missing> rdfs:label "Missing"@en ;
+   rdfs:comment "A resource is missing."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/AlarmViolation> rdfs:label "Alarm Violation" ;
+   rdfs:comment "An alarm that has breached, infringed, or transgressed a law, rule, or permit.  May result in notice, requirement of corrective action, or fine from AHJ." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/numberOfSmokeAlarmsInstalled> rdfs:label "Number Of Smoke Alarms Installed"@en ;
+   rdfs:comment "Number of smoke alarms installed in a building or structure."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:positiveInteger .
+<http://data.nfpa.org/model/crr/AnnualInspection> rdfs:label "Annual Inspection"@en ;
+   rdfs:comment "A inspection which is conducated annually."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Inspection> .
+<http://data.nfpa.org/model/crr/ViolationHistory> rdfs:label "Violation History" ;
+   rdfs:comment "A record, often chronological, that serves to document previous violations at a specific location or event." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HistoricData> .
+<http://data.nfpa.org/model/crr/Podcast> rdfs:label "Podcast" ;
+   rdfs:comment "A digital audio file made available on the Internet for listening or downloading on an internet-enabled device, typically available as a topical series, new installments of which can be received by subscribers automatically." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Radio> .
+<http://data.nfpa.org/model/crr/Radio> rdfs:label "Radio" ;
+   rdfs:comment "The transmission and reception of electromagnetic waves of radio frequency, especially those carrying sound messages. In CRR applications, this applies to announcements and educational messages." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/AutomaticSuppression> rdfs:label "Automatic Suppression"@en ;
+   rdfs:comment "Automatic fire suppression systems control and extinguish fires without human intervention."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/Messaging> rdfs:label "Messaging"@en ;
+   rdfs:comment "A CRR Event in which messaging is used a primary communication medium."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/Structure> rdfs:label "Structure"@en ;
+   rdfs:comment "A structure is something of many parts that is put together. A structure can be a skyscraper, an outhouse or a simple dwelling."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/ExitSign> rdfs:label "Exit Sign" ;
+   rdfs:comment "A device in a public facility denoting the closest means of egress." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Sign> .
+<http://data.nfpa.org/model/crr/Sign> rdfs:label "Sign" ;
+   rdfs:comment "A visual indicator in the form of a placard or device that displays information or instructions in a written or symbolic form." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/EducationLevel> rdfs:label "Education Level" ;
+   rdfs:comment "Highest level of education that an individual has completed." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/Demographics> rdfs:label "Demographics" ;
+   rdfs:comment """The demographics of a certain area or political entity.
+
+Revision:  Socio-economic information expressed statistically.""" ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/Magazine> rdfs:label "Magazine"@en ;
+   rdfs:comment "A magazine to which a CRR Event is related to."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/SprinklerViolation> rdfs:label "Sprinkler Violation"@en ;
+   rdfs:comment "When the expections and conditions of a sprinkler are not met."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/FireSafetyInstruction> rdfs:label "Fire Safety Instruction" ;
+   rdfs:comment "Detailed information telling the set of practices intended to reduce the destruction caused by fire." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/FalseAlarmInspection> rdfs:label "False Alarm Inspection" ;
+   rdfs:comment "A visual examination of a system or portion thereof to verify that it appears to be in operating condition and is free of physical damage after a notification of an alarm condition when no evidence of the event that the alarm signal was designed to report is found." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Inspection> .
+<http://data.nfpa.org/model/crr/LifeSafetyTraining> rdfs:label "Life Safety Training"@en ;
+   rdfs:comment "Life safety training which contains the basics of life safety like resuscitation."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Training> .
+<http://data.nfpa.org/model/crr/ExtinguisherViolation> rdfs:label "Extinguisher Violation" ;
+   rdfs:comment "Failure to comply with adopted fire and life safety code related to fire extinguishers." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/VisualDisability> rdfs:label "Visual Disability" ;
+   rdfs:comment "A condition or impairment that limits the sense of sight." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Disability> .
+<http://data.nfpa.org/model/crr/Disability> rdfs:label "Disability" ;
+   rdfs:comment "A disability or functional impairment that may be cognitive, developmental, intellectual, mental, physical, sensory, or some combination of these. " ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/RoutineInspection> rdfs:label "Routine Inspection" ;
+   rdfs:comment "An inspection conducted with a certain frequency." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Inspection> .
+<http://data.nfpa.org/model/crr/TentPermit> rdfs:label "Tent Permit" ;
+   rdfs:comment "A permit associated with the erection of a temporary membrane structure,." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/PlanReview> rdfs:label "Plan Review" ;
+   rdfs:comment "The process of reviewing construction plans to ensure that new construction meets fire and life safety standards set forth by the NFPA, and regulations imposed by the federal, state, and local authorities." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Law> .
+<http://data.nfpa.org/model/crr/OtherViolation> rdfs:label "Other Violation" ;
+   rdfs:comment "Violation other than described in the model." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> .
+<http://data.nfpa.org/model/crr/isHome> rdfs:label "is home" ;
+   rdfs:comment "Indicates whether the resident was at home and the home visit could take place."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/HomeVisit> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/HomeVisit> rdfs:label "Home Fire Safety Visit" ;
+   rdfs:comment "Mostly firefighters or fire prevention ambassadors which visit people at home to give education and do small check-ups." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/inspectionProperty> rdfs:label "Inspection Property"@en ;
+   rdfs:comment "Property which was subject for the inspection."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/Coordinate> rdfs:label "Coordinate" ;
+   rdfs:comment "A group of numbers used to indicate the position of a point, line or plane (e.g. Latitude and Longitude)." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Location> .
+<http://data.nfpa.org/model/crr/Location> rdfs:label "Location"@en ;
+   rdfs:comment "Location of place where the CRR event took place."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/usps#MailingLocation> , <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/OtherPermit> rdfs:label "Other Permit" ;
+   rdfs:comment "A permit other than those described in the model." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> .
+<http://data.nfpa.org/model/crr/CPRTraining> rdfs:label "CPR Training" ;
+   rdfs:comment "Education delivery for cardiopulmonary resuscitation including practical skills and knowledge." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Training> .
+<http://data.nfpa.org/model/crr/partOfMajorCampaign> rdfs:label "part of Major Campaign"@en ;
+   rdfs:comment "Describes the major campaign of which this activity is part of."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Campaign> .
+<http://data.nfpa.org/model/crr/Campaign> rdfs:label "Campaign" ;
+   rdfs:comment "A series of operations intended to achieve a particular objective.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/investigator> rdfs:label "Investigator"@en ;
+   rdfs:comment "The actor responsible for the investigation."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Investigation> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Investigator> .
+<http://data.nfpa.org/model/crr/fireInstructionsGiven> rdfs:label "Fire Instructions Given"@en ;
+   rdfs:comment "Describes which fire safety instruction are given to the participants."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> ;
+   rdfs:range <http://data.nfpa.org/model/crr/FireSafetyInstruction> ;
+   rdfs:subPropertyOf owl:topObjectProperty .
+<http://data.nfpa.org/model/crr/numberOfAttendees> rdfs:label "Number Of Attendees"@en ;
+   rdfs:comment "Number of attendees, attending the CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> ;
+   rdfs:range xsd:positiveInteger .
+<http://data.nfpa.org/model/crr/HighSchoolProgram> rdfs:label "High School Program" ;
+   rdfs:comment "An event occuring at a school (physical location) with US grade levels including 9,10,11,12. Students ages 13,14,15,16,17,18,19." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SchoolProgram> , <http://data.nfpa.org/model/crr/Structure> , <http://data.nfpa.org/model/crr/EducationLevel> , <http://data.nfpa.org/model/crr/AgeGroup> .
+<http://data.nfpa.org/model/crr/AgeGroup> rdfs:label "Age Group" ;
+   rdfs:comment "Describes the age of a group of persons.  This may be documented as a range of ages, ie: 50-59, Middle School age, Senior Citizens." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Age> .
+<http://data.nfpa.org/model/crr/Age> rdfs:label "Age" ;
+   rdfs:comment "Describes the age of a person or group of persons.  This may be documented as a discrete number (i.e. 51 years old) or a range of ages (i.e. 50-59)." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/incidentEnteredInNFIRS> rdfs:label "Incident Entered In Nfirs"@en ;
+   rdfs:comment "Indicates whether the incident is entered into the National Fire Incident Reporting System"@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Incident> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/hasEducator> rdfs:label "Has Educator"@en ;
+   rdfs:comment "The actor responsible for the education given during this CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Educator> .
+<http://data.nfpa.org/model/crr/Educator> rdfs:label "Educator" ;
+   rdfs:comment "Person or thing that imparts general knowledge or develops the power of reasoning." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/Newspaper> rdfs:label "Newspaper"@en ;
+   rdfs:comment "A newspaper which is related to a CRR Event."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/InformationGathering> rdfs:label "Information Gathering" ;
+   rdfs:comment "Information gathering is the process of gathering information in  a certain area. For example with a questionnaire." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/maintenanceReport> rdfs:label "Maintenance Report"@en ;
+   rdfs:comment "The maintenance report created during the maintenance of a resource."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Building> ;
+   rdfs:range <http://data.nfpa.org/model/crr/MaintenanceReport> .
+<http://data.nfpa.org/model/crr/Presentation> rdfs:label "Presentation" ;
+   rdfs:comment " A descriptive or persuasive account." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/FireTruckVisit> rdfs:label "Fire Truck Visit" ;
+   rdfs:comment "An appearance of a private, industrial or municipal fire apparatus of any type to conduct community risk reduction activities" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Visit> .
+<http://data.nfpa.org/model/crr/Visit> rdfs:label "Visit" ;
+   rdfs:comment "The act of physically traveling to a location." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/Parcel> rdfs:label "Parcel"@en ;
+   rdfs:comment "An area of land."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/CensusTract> rdfs:label "Census Tract" ;
+   rdfs:comment "A geographic region defined for the purpose of taking a census." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/Industrial> rdfs:label "Industrial" ;
+   rdfs:comment "A business or organization location involved in manufacturing, transportation or storage of products." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BusinessActor> .
+<http://data.nfpa.org/model/crr/BusinessActor> rdfs:label "Business Actor" ;
+   rdfs:comment "A person responsible for a business (i.e., owner, manager). " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Organization> .
+<http://data.nfpa.org/model/crr/assessmentTakenBy> rdfs:label "Assessment taken by"@en ;
+   rdfs:comment "Actor responsible for taking the assessment."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Assessment> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/debriefing> rdfs:label "Event debriefed"@en ;
+   rdfs:comment "Indicates whether a debriefing was part of the CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/hasDisability> rdfs:label "Has disability"@en ;
+   rdfs:comment "Indicates the disability the actor is suffering."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/PrivateActor> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Disability> .
+<http://data.nfpa.org/model/crr/ExitViolation> rdfs:label "Exit Violation" ;
+   rdfs:comment "Failure to comply with adopted fire and life safety code specifically related to components of means of egress." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/HomeSurvey> rdfs:label "Home Survey" ;
+   rdfs:comment "An assessment tool used to capture information at an event taking place at a home where an actor is present (not necessarily the actor's primary residence). Identifies risk(s) or hazard(s) specific to population or jurisdiction. Completed in person at the geographic location." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Survey> .
+<http://data.nfpa.org/model/crr/Survey> rdfs:label "Survey"@en ;
+   rdfs:comment "A Survey is defined as a research method used for collecting data from a pre-defined group of respondents to gain information and insights on various topics of interest."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/InformationGathering> .
+<http://data.nfpa.org/model/crr/CivicOrganization> rdfs:label "Civic organization" ;
+   rdfs:comment "A group of individuals who join together for a specific purpose or cause.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/NonProfitActor> .
+<http://data.nfpa.org/model/crr/Gender> rdfs:label "Gender" ;
+   rdfs:comment "The identity of a person as female or male or as neither entirely female nor entirely male." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/needIdentified> rdfs:label "Need Identified"@en ;
+   rdfs:comment "Need identified during an inspection."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/RedCross> rdfs:label "Red Cross"@en ;
+   rdfs:comment "An international philanthropic organization (Red Cross Society), formed in consequence of the Geneva Convention of 1864, to care for the sick and wounded in war, secure neutrality of nurses, hospitals, etc."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EmergencyFirstResponder> .
+<http://data.nfpa.org/model/crr/PrivateFireHydrant> rdfs:label "Private Fire Hydrant" ;
+   rdfs:comment """A privately owned connection point to a water main from
+which water may be taken for fire fighting purposes. """ ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireHydrant> .
+<http://data.nfpa.org/model/crr/FireHydrant> rdfs:label "Fire Hydrant" ;
+   rdfs:comment """A fire hydrant is a connection point by which firefighters can tap into a water supply.
+OR
+A valved connection on a water supply system having one or more outlets and that is used to supply hose and fire department apparatus with water.""" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/PlatPermit> rdfs:label "Plat Permit" ;
+   rdfs:comment "An official document giving someone authorization to do something on a tract or parcel of land owned or meant to be owned by some owner(s)." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/Resident> rdfs:label "Resident" ;
+   rdfs:comment "One who resides in a place for a length of time." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/PrivateActor> .
+<http://data.nfpa.org/model/crr/FireDepartmentData> rdfs:label "Fire Department Data" ;
+   rdfs:comment "Any data created by a fire department covering a range of topics and is not limited to incident reports. Fire Department Data can also include inspection reports, permits, scheduling, maintenance, training, and generally any kind of report or collection of information kept by the fire department. " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HistoricData> .
+<http://data.nfpa.org/model/crr/WaterSupply> rdfs:label "Water supply" ;
+   rdfs:comment "The provision of water using processes and systems including reservoirs, connections, hoses and/or pipelines." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/refusedServices> rdfs:label "Refused Services" ;
+   rdfs:comment "Indicates whether a CRR Event is refused."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/AddressViolation> rdfs:label "Address Violation" ;
+   rdfs:comment "Address violation." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> .
+<http://data.nfpa.org/model/crr/targetedAudience> rdfs:label "Targeted Audience"@en ;
+   rdfs:comment "The adience targeted for a specific CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/mediaSubject> rdfs:label "Media Subject"@en ;
+   rdfs:comment "Subject for a media CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Media> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/locationOfEducation> rdfs:label "Location Of Education"@en ;
+   rdfs:comment "Describes the place of the education CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/visitor> rdfs:label "Visitor"@en ;
+   rdfs:comment "A visitor responsible for conducting the home visit."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/HomeVisit> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/ConstructionChange> rdfs:label "Construction Change" ;
+   rdfs:comment "A change to a building or structure, which at least involves the construction of the building or structure.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HistoricData> .
+<http://data.nfpa.org/model/crr/actionTaken> rdfs:label "action taken" ;
+   rdfs:comment "Action taken by the actor during the event to achieve a certain goal at that moment or in the furture."@en , "The action taken during the CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/HomeSafetyFlyer> rdfs:label "Home Safety Flyer"@en ;
+   rdfs:comment "A Home Safety Flyer is a simple flyer with a CRR message which is deliverd to every home in a certain area."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Pamphlet> .
+<http://data.nfpa.org/model/crr/fullSmokeAlarmCoverage> rdfs:label "Full Smoke Alarm Coverage"@en ;
+   rdfs:comment "Indicates whether there is full smoke alarm coverage in the building or structure."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/status> rdfs:label "Status"@en ;
+   rdfs:comment "Indicates the status of the resource."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Resources> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/EventPermit> rdfs:label "Event Permit" ;
+   rdfs:comment "A document issued by the AHJ for the purpose of authorizing performance of a specified activity" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/isReinspection> rdfs:label "Is Reinspection"@en ;
+   rdfs:comment "Indicates whether the inspection is a reinspection."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/NationalFireAcademy> rdfs:label "National Fire Academy" ;
+   rdfs:comment "The National Fire Academy (NFA) is one of two schools in the United States operated by the Federal Emergency Management Agency (FEMA) at the National Emergency Training Center (NETC) in Emmitsburg, Maryland" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/EditingParkingLot> .
+<http://data.nfpa.org/model/crr/Contractor> rdfs:label "Contractor" ;
+   rdfs:comment "A person or company that provides materials, supplies or services." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BusinessActor> .
+<http://data.nfpa.org/model/crr/EscapePlan> rdfs:label "Escape plan" ;
+   rdfs:comment "A strategy or document specifically designed to remove a person from a dangerous situation" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BuildingEmergencyPlanning> .
+<http://data.nfpa.org/model/crr/educationSubject> rdfs:label "Education Subject" ;
+   rdfs:comment "The subject for education." ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Education> .
+<http://data.nfpa.org/model/crr/MiddleSchoolProgram> rdfs:label "Middle School Program"@en ;
+   rdfs:comment "Middle school program."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SchoolProgram> .
+<http://data.nfpa.org/model/crr/AlarmPermit> rdfs:label "Alarm Permit" ;
+   rdfs:comment "Registration of alarm system with local responding agencies.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/InvestigationReport> rdfs:label "Investigation Report" ;
+   rdfs:comment "A report generated to document the facts of any investigation conducted under any civil or criminal authority. This report may also include direct and indirect evidence that support the hypothesis." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Report> .
+<http://data.nfpa.org/model/crr/MobileDisability> rdfs:label "Mobile Disability"@en ;
+   rdfs:comment "Mobility impairment refers to the inability of a person to use one or more of his/her extremities, or a lack of strength to walk, grasp, or lift objects."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Disability> .
+<http://data.nfpa.org/model/crr/investigationRequired> rdfs:label "Investigation Required"@en ;
+   rdfs:comment "Indicates whether a investigation is required."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/Address> rdfs:label "Address"@en ;
+   rdfs:comment "The number of the house, name of the road, and name of the town where a person lives or works, and where letters can be sent"@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Location> .
+<http://data.nfpa.org/model/crr/InspectionPamphlet> rdfs:label "Inspection Pamphlet" ;
+   rdfs:comment "An inspection checklist, when used properly, is an assurance that a particular piece of equipment or location has been inspected. As each item on the checklist is ticked off, the person doing the inspection is verifying that each component of the equipment is in correct working order" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Pamphlet> .
+<http://data.nfpa.org/model/crr/timespan> rdfs:label "Timespan"@en ;
+   rdfs:comment "The timespan of the data."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Data> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/Mobility> rdfs:label "Mobility"@en ;
+   rdfs:comment "Describes the mobility within the demographics."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/CensusData> rdfs:label "Census Data" ;
+   rdfs:comment "One of many data sets collected by the US Census Bureau." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HistoricData> .
+<http://data.nfpa.org/model/crr/numberOfBatteriesInstalled> rdfs:label "Number Of Batteries Installed"@en ;
+   rdfs:comment "The amount of batteries installed."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:positiveInteger .
+<http://data.nfpa.org/model/crr/Parade> rdfs:label "Parade"@en ;
+   rdfs:comment "CRR Event during a parade."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/TemporaryLocation> .
+<http://data.nfpa.org/model/crr/TemporaryLocation> rdfs:label "Temporary Location" ;
+   rdfs:comment "A non-permanent location such as a parade, fair or festival." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/publishedBy> rdfs:label "Published By"@en ;
+   rdfs:comment "describes which actor is responsible for publishing certain data."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Data> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/ageOfSmokeAlarm> rdfs:label "Age Of Smoke Alarm Years" ;
+   rdfs:comment "The age of the smoke alarm." ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/SmokeAlarm> ;
+   rdfs:range xsd:positiveInteger ;
+   <http://www.w3.org/2004/02/skos/core#example> "2" .
+<http://data.nfpa.org/model/crr/SmokeAlarmLivingArea> rdfs:label "Smoke Alarm Living Area" ;
+   rdfs:comment "A smoke alarm is present and operational in the vicinity of the Living Area" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SmokeAlarm> .
+<http://data.nfpa.org/model/crr/Income> rdfs:label "Income" ;
+   rdfs:comment "Household income is the combined gross annual income in US dollars, of all members of a household who are 15 years or older. Individuals do not have to be related in any way to be considered members of the same household." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/Healthcare> rdfs:label "Healthcare" ;
+   rdfs:comment "A healthcare actor shall be an employee of a private or not-for-profit healthcare provider not primarily working for an emergency response agency.  (hospital, urgent care, AODA treatment center, pharmacy, rehabilitation, long term care facility, etc.). " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BusinessActor> ;
+   owl:disjointWith <http://data.nfpa.org/model/crr/Place> , <http://data.nfpa.org/model/crr/Status> , <http://data.nfpa.org/model/crr/Sign> .
+<http://data.nfpa.org/model/crr/HomeOwnerAssociations> rdfs:label "Home Owner Associations"@en ;
+   rdfs:comment "A Home Owners Association (HOA) is an organization of homeowners of a particular subdivision, condominium or planned unit development."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/NonProfitActor> .
+<http://data.nfpa.org/model/crr/Fair> rdfs:label "Fair" ;
+   rdfs:comment "Gathering of people for a variety of entertainment or commercial purposes, lasting between several hours to several weeks. See also: festival, fete" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/TemporaryLocation> .
+<http://data.nfpa.org/model/crr/RoofType> rdfs:label "Roof type" ;
+   rdfs:comment "Describing the roof construction and design of a permanent or temporary structure." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/BuildingFeatures> .
+<http://data.nfpa.org/model/crr/Sprinkler> rdfs:label "Sprinkler"@en ;
+   rdfs:comment "A device that sprays water."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/SprinklerPermit> rdfs:label "Sprinkler Permit"@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> ;
+   rdfs:commit "Sprinkler permit." .
+<http://data.nfpa.org/model/crr/Race> rdfs:label "Race" ;
+   rdfs:comment "Major divisions of humankind, having distinct physical characteristics; a group of people sharing the same culture, history, language. See also: ethnic group." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Demographics> .
+<http://data.nfpa.org/model/crr/HoodViolation> rdfs:label "Kitchen Hood Violation" ;
+   rdfs:comment "A violation that indicates non-compliance in a Kitchen Hood System." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/HoodPermit> rdfs:label "Kitchen Hood Permit" ;
+   rdfs:comment "See NFPA 96. A device provided for a cooking appliance to detect and capture grease-laden vapors and exhaust gases. Permit provided in compliance with local code or standard." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/SocialMedia> rdfs:label "Social Media"@en ;
+   rdfs:comment "CRR Event conducted by using social media as primary medium."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/inspectionStatisfied> rdfs:label "Inspection Statisfied"@en ;
+   rdfs:comment "Indicates whether the inspection is statisfied."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/BedShakerAlarm> rdfs:label "Bed Shaker Alarm" ;
+   rdfs:comment "A smoke alarm accessory intended to alert people who are deaf or hard of hearing of the presence of smoke. " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/FireAlarm> .
+<http://data.nfpa.org/model/crr/NeighborhoodCanvassing> rdfs:label "Neighborhood Canvassing"@en ;
+   rdfs:comment "Canvassing in a neighbourhood."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HomeVisit> .
+<http://data.nfpa.org/model/crr/Poster> rdfs:label "Poster" ;
+   rdfs:comment "A bill or placard for posting that is decorative or pictorial offering an educational message via printed media.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Media> .
+<http://data.nfpa.org/model/crr/ElectricalViolation> rdfs:label "Electrical Violation" ;
+   rdfs:comment "a breach or failure to comply in the adopted electrical code." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/PreschoolProgram> rdfs:label "Preschool Program" ;
+   rdfs:comment "CRR Event and or program design for delivery at an educational institution of learning for ages 3-5 years." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/SchoolProgram> .
+<http://data.nfpa.org/model/crr/visitType> rdfs:label "Visit Type"@en ;
+   rdfs:comment "The type of visit."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Visit> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/represents> rdfs:label "Represents"@en ;
+   rdfs:comment "The organization the actor represents."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Actor> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Organization> .
+<http://data.nfpa.org/model/crr/StorageViolation> rdfs:label "Storage Violation"@en ;
+   rdfs:comment "Storage violation."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Violation> .
+<http://data.nfpa.org/model/crr/FireworksPermit> rdfs:label "Fireworks Permit" ;
+   rdfs:comment "A government document allowing the use of approved low explosive pyrotechnic devices used for aesthetic and entertainment purposes." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/previousInspection> rdfs:label "Previous Inspection"@en ;
+   rdfs:comment "The inspection prior to this inspection."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Inspection> .
+<http://data.nfpa.org/model/crr/notes> rdfs:label "Notes"@en ;
+   rdfs:comment "Notes on a CRR Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/fullSmokeAlarmBedroomCoverage> rdfs:label "Full Smoke Alarm Bedroom Coverage"@en ;
+   rdfs:comment "indicates whether there is a full smoke alarm bedroom coverage."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Inspection> ;
+   rdfs:range xsd:boolean .
+<http://data.nfpa.org/model/crr/TankPermit> rdfs:label "Tank Permit" ;
+   rdfs:comment "A type of permit that authorizes work to remove, install or alter a storage tank (both above and below ground)." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/Appointment> rdfs:label "Appointment"@en ;
+   rdfs:comment "A CRR Event triggered by an appointment."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HomeVisit> .
+<http://data.nfpa.org/model/crr/incidentLocation> rdfs:label "Incident Location"@en ;
+   rdfs:comment "The location where the incident happended."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Place> .
+<http://data.nfpa.org/model/crr/firstItemIgnited> rdfs:label "First Item Ignited"@en ;
+   rdfs:comment "The first item ignited."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Investigation> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/schoolName> rdfs:label "School Name"@en ;
+   rdfs:comment "The name of the school where the CRR event took place."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/SchoolInspection> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/SchoolInspection> rdfs:label "School Inspection"@en ;
+   rdfs:comment "School Inspection"@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Inspection> .
+<http://data.nfpa.org/model/crr/SmokeAlarmInstallation> rdfs:label "Smoke Alarm Installation" ;
+   rdfs:comment "A smoke alarm was installed." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HomeVisit> .
+<http://data.nfpa.org/model/crr/hasTimeStamp> rdfs:label "Has time stamp"@en ;
+   rdfs:comment "The time stamp of an event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:dateTimeStamp ;
+   rdfs:subPropertyOf <http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> .
+<http://data.nfpa.org/model/crr/hasBeginTimeStamp> rdfs:label "Has begin timestamp"@en ;
+   rdfs:comment "Has begin timestamp is used to indicate the beginning of a time interval."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:dateTimeStamp ;
+   rdfs:subPropertyOf <http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp> .
+<http://data.nfpa.org/model/crr/hasEndTimeStamp> rdfs:label "Has end timestamp"@en ;
+   rdfs:comment "Has end timestamp is used to indicate the end of a time interval."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range xsd:dateTimeStamp ;
+   rdfs:subPropertyOf <http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp> .
+<http://data.nfpa.org/model/crr/hasPlace> rdfs:label "Has place"@en ;
+   rdfs:comment "Has place is used to assign a event to a place."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Place> ;
+   rdfs:subPropertyOf <http://semanticweb.cs.vu.nl/2009/11/sem/hasPlace> .
+<http://data.nfpa.org/model/crr/hasActor> rdfs:label "Has actor"@en ;
+   rdfs:comment "Has actor is used to state which Actors or Objects participate in an Event."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Event> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Actor> ;
+   rdfs:subPropertyOf <http://semanticweb.cs.vu.nl/2009/11/sem/hasActor> .
+<http://data.nfpa.org/model/crr/author> rdfs:label "Author"@en ;
+   rdfs:comment "The author of a report."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/InspectionReport> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Author> .
+<http://data.nfpa.org/model/crr/Author> rdfs:label "Author"@en ;
+   rdfs:comment "A actor who has written something especially like a report."@en ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Actor> .
+<http://data.nfpa.org/model/crr/constructionYear> rdfs:label "Construction year"@en ;
+   rdfs:comment "Construction year of a certain building."@en ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Building> ;
+   rdfs:range xsd:positiveInteger .
+<http://data.nfpa.org/model/crr/hasEvent> rdfs:label "Campaign has event."@en ;
+   rdfs:comment "Event which is part of this specific campaign." ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Campaign> ;
+   rdfs:range <http://data.nfpa.org/model/crr/Event> .
+<http://data.nfpa.org/model/crr/HomeVisitOlderAdults> rdfs:label "Home Visit Older Adults" ;
+   rdfs:comment "A type of home visit with older adults to focus on typical safety concerns such as fire safety, cooking safety, slips/trips/falls." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HomeVisit> .
+<http://data.nfpa.org/model/crr/HearingImpairment> rdfs:label "Hearing Impairment" ;
+   rdfs:comment "How many people within the home are hearing impaired.  " ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/HomeVisitOlderAdults> ;
+   rdfs:range xsd:nonPositiveInteger .
+<http://data.nfpa.org/model/crr/TargetedArea> rdfs:label "Targeted Area" ;
+   rdfs:comment "The area where the community risk reduction activity is being focused based upon an assessment of specific risks or the presence of specific high risk populations." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/HomeVisit> .
+<http://data.nfpa.org/model/crr/organizationName> rdfs:label "Name of organization."@en ;
+   rdfs:comment "The name of the organization." ;
+   a rdf:Property ;
+   rdfs:domain <http://data.nfpa.org/model/crr/Organization> ;
+   rdfs:range xsd:string .
+<http://data.nfpa.org/model/crr/SubstantialRenovation> rdfs:label "Substantial Renovation" ;
+   rdfs:comment "A substantial or major change to a building or structure, which at least involves modification to more than 51% of the building or structure." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Data> .
+<http://data.nfpa.org/model/crr/FireExtinguisher> rdfs:label "Fire Extinguisher" ;
+   rdfs:comment "A device that contains an extinguishing agent that can be expelled under pressure for the purpose of suppressing or extinguishing fire. Extinguishing agents must be  classified under NFPA requirements for type and performance " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Education> , <http://data.nfpa.org/model/crr/FireProtectionFeatures> .
+<http://data.nfpa.org/model/crr/TenantImprovementPermit> rdfs:label "Tenant Improvement Permit" ;
+   rdfs:comment "A tenant improvement is construction or alterations within an existing building which are needed to meet the requirements of a new or existing tenant within the tenant space." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Permit> .
+<http://data.nfpa.org/model/crr/DeafHardOfHearing> rdfs:label "Deaf or Hard of Hearing" ;
+   rdfs:comment "A person who has full or partial impairment of their hearing ability.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Disability> .
+<http://data.nfpa.org/model/crr/NoErrorsNoted> rdfs:label "No Errors Noted" ;
+   rdfs:comment "Describes a condition of a device, building, or inspection whereby the person doing the assessment has not found or did not observe any problems, errors, or violations that warrant action or correction.  " ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/Alarm> rdfs:label "Alarm" ;
+   rdfs:comment "A signal or message from a device indicating the existence of an emergency or other situation that requires action." ;
+   a rdfs:Class , owl:Class .
+<http://data.nfpa.org/model/crr/Maintenance> rdfs:label "Maintenance" ;
+   rdfs:comment "The process of maintaining something or preserving something, or the state of being maintained." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/Installation> rdfs:label "Installation" ;
+   rdfs:comment "The process of installing something, place or fix (equipment or machinery) in position ready for use" ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Status> .
+<http://data.nfpa.org/model/crr/FixedAge> rdfs:label "Fixed Age" ;
+   rdfs:comment "Describes the Age of a person.  Documented as a discrete number, ie: 51 years old." ;
+   a rdfs:Class , owl:Class ;
+   rdfs:subClassOf <http://data.nfpa.org/model/crr/Age> .
