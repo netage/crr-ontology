@@ -443,7 +443,7 @@ Revision:  Socio-economic information expressed statistically.""" ;
 <http://data.nfpa.org/model/crr/Location> rdfs:label "Location"@en ;
    rdfs:comment "Location of place where the CRR event took place."@en ;
    a rdfs:Class , owl:Class ;
-   rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/usps#MailingLocation> , <http://data.nfpa.org/model/crr/Place> .
+   rdfs:subClassOf <https://www.w3.org/2000/10/swap/pim/usps#MailingLocation> , <http://data.nfpa.org/model/crr/Place> .
 <http://data.nfpa.org/model/crr/OtherPermit> rdfs:label "Other Permit" ;
    rdfs:comment "A permit other than those described in the model." ;
    a rdfs:Class , owl:Class ;
